@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cookie_clicker/static/css/main.ea53e4d2.css",
+    "main.js": "/cookie_clicker/static/js/main.9b8eb345.js",
+    "static/js/453.5c6d8b44.chunk.js": "/cookie_clicker/static/js/453.5c6d8b44.chunk.js",
+    "index.html": "/cookie_clicker/index.html",
+    "main.ea53e4d2.css.map": "/cookie_clicker/static/css/main.ea53e4d2.css.map",
+    "main.9b8eb345.js.map": "/cookie_clicker/static/js/main.9b8eb345.js.map",
+    "453.5c6d8b44.chunk.js.map": "/cookie_clicker/static/js/453.5c6d8b44.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea53e4d2.css",
+    "static/js/main.9b8eb345.js"
+  ]
+}
