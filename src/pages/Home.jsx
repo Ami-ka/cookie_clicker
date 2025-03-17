@@ -1,27 +1,15 @@
-import React from "react";
+import { React, useContext } from "react";
 import Counter from "../components/Counter";
-import { useState,createContext } from "react";
+import { Theme } from "../App";
 
 function Home() {
-  const [count, setCount] = useState(0);
-  const countValue = { count, setCount };
-
-  const [theme, setTheme] = useState("-light");
-  const toogleTheme = () => {
-    theme === "-light" ? setTheme("-black") : setTheme("-light");
-  };
-  const themeValue = { theme, toogleTheme };
+  const { theme } = useContext(Theme)
+  
   return (
-    <Count.Provider value={countValue}>
-      <Theme.Provider value={themeValue}>
-        <div className={"App" + theme}>
-          <Counter />
-        </div>
-      </Theme.Provider>
-    </Count.Provider>
+    <div className={"App" + theme}>
+      <Counter />
+    </div>
   );
 }
 
 export default Home;
-export const Theme = createContext();
-export const Count = createContext();

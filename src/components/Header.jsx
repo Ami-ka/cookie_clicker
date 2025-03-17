@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
-import ToogleTheme from "./ToogleTheme";
 import { Link } from "react-router";
-import { Theme } from "../pages/Home";
+import { Theme } from "../App";
+
 function Header() {
-  const toogleTheme = useContext(Theme);
+  const { theme } = useContext(Theme);
+
   return (
-    <header>
+    <header class={"header" + theme}>
       <nav>
         <Link to="/">Cookie</Link>
         <Link to="/about">About</Link>
