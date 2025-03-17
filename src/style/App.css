@@ -1,0 +1,161 @@
+:root{
+  --blackColor: black;
+}
+
+header{
+  display: flex;
+  max-height: 60px;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+.App-light {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--blackColor);
+}
+
+
+
+
+.App-black {
+  background-color: var(--blackColor);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--blackColor);
+}
+
+.toogle {
+  position: fixed;
+  left: 1px;
+  top: 2px;
+}
+
+.switch {
+  position: fixed;
+  display: inline-block;
+  left: 2px;
+  top: 4px;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  border-radius: 34px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #7b4024;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider::before {
+  border-radius: 34px;
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 2px;
+  background-color: #333;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #bc5f34;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.h1-light {
+  color: var(--blackColor);
+}
+
+.h1-black {
+  color: white;
+}
+
+.container #clickbutton {
+  display: inline-block;
+  width: 100px;
+  /* Размер кнопки */
+  height: 100px;
+  /* Размер кнопки */
+  border-radius: 50%;
+  /* Делает кнопку круглой */
+  background: linear-gradient(to bottom, #9e4a0e, #bc5f34);
+  /* Цвет шоколада */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  /* Тень для объема */
+  cursor: pointer;
+  position: relative;
+}
+
+.container #clickbutton::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+  /* Блик */
+}
+
+.container #clickbutton::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  /* Шоколадная крошка */
+  border-radius: 50%;
+  box-shadow: 15px 20px #333, -10px 30px #333, 20px -15px #333;
+  /* Шоколадная крошка */
+  top: 20px;
+  left: 20px;
+}
+
+.container #clickbutton:hover {
+  transform: scale(1.1);
+  /* Эффект при наведении */
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+}
+
+.container #clickbutton:active {
+  transform: scale(0.95);
+  /* Эффект при нажатии */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}

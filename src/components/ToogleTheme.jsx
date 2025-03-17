@@ -1,0 +1,15 @@
+import React, { useContext } from "react";
+import { Theme } from "../pages/Home";
+
+
+function ToogleTheme() {
+    const { toogleTheme } = useContext(Theme)
+    return (
+        <label className="switch">
+            <input type="checkbox" onClick={toogleTheme} />
+            <span className="slider">
+            </span>
+        </label>
+    )
+}
+export default ToogleTheme;
